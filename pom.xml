@@ -143,6 +143,10 @@
 			<groupId>org.apache.solr</groupId>
 			<artifactId>solr-solrj</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-redis</artifactId>
+		</dependency>
         <!--<dependency>
 			<groupId>org.elasticsearch</groupId>
 			<artifactId>elasticsearch</artifactId>
@@ -225,10 +229,15 @@
 		</dependency>
         -->
 
-		<!-- <dependency>
+		 <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
-        </dependency> -->
+        </dependency>
+		<dependency>
+			<groupId>org.wltea.ik-analyzer</groupId>
+			<artifactId>ik-analyzer</artifactId>
+			<version>2012FF_u1</version>
+		</dependency>
         <!-- <dependency>
 		    <groupId>tk.mybatis</groupId>
 		    <artifactId>mapper-spring-boot-starter</artifactId>
@@ -353,6 +362,11 @@
 			<version>1.28.0</version>
 			<optional>true</optional>
 		</dependency>-->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-stream-kafka</artifactId>
+			<version>1.2.1.RELEASE</version>
+		</dependency>
 
 
 		<!--<dependency>
