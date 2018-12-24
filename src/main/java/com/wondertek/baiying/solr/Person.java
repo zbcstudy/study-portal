@@ -1,13 +1,19 @@
 package com.wondertek.baiying.solr;
 
+import org.apache.solr.client.solrj.beans.Field;
+
 /**
  * Created by wd on 2018/1/16.
  */
 public class Person {
+
+    @Field
     private String id;
 
+    @Field
     private String name;
 
+    @Field
     private String description;
 
     public String getName() {

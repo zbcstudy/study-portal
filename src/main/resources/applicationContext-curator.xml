@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--zookeeper重试策略-->
+    <bean id="retryPolicy" class="org.apache.curator.retry.RetryNTimes">
+        <constructor-arg index="0" value="10" />
+        <constructor-arg index="1" value="5000"/>
+    </bean>
+
+    <!--zookeeper客户端-->
+    <bean id="curatorFrameworkFactory" class="org.apache.curator.framework.CuratorFrameworkFactory"
+        factory-method="newClient" init-method="start">
+        <!--Fzk服务地址，集群用','分离-->
+        <constructor-arg name="connectString" value="127.0.0.1:2181"/>
+        <!--回话超时时间-->
+        <constructor-arg name="sessionTimeoutMs" value="10000"/>
+        <!--创建连接超时时间-->
+        <constructor-arg name="connectionTimeoutMs" value="5000"/>
+        <!--重试策略-->
+        <constructor-arg name="retryPolicy" ref="retryPolicy"/>
+    </bean>
+
+
+</beans>
