@@ -13,7 +13,8 @@ public class ArraySort {
         int[] array = {5,2,23,45,1,22,11,4,6};
         //Arrays.sort(array);
         //int[] list = insertionSort(array);
-        int[] list = bubbleSort(array);
+        int[] list = insertSort(array);
+//        int[] list = bubbleSort(array);
         for (int i = 0;i < list.length;i++) {
             System.out.println(list[i]);
         }
@@ -54,6 +55,26 @@ public class ArraySort {
                 list[k + 1] = list[k];
             }
             list[k+1] = currentElement;
+        }
+        return list;
+    }
+
+    /**
+     * 插入排序
+     * @param list
+     * @return
+     */
+    public static int[] insertSort(int[] list) {
+        int j;
+        //从下标为1的位置选择合适的位置插入,下标为0的元素默认是有序的
+        for (int i = 0; i < list.length; i++) {
+            int temp = list[i];
+            j = i;
+            while (j > 0 && temp < list[j-1]) {
+                list[j] = list[j - 1];
+                j--;
+            }
+            list[j] = temp;
         }
         return list;
     }
