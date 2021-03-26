@@ -119,11 +119,11 @@
 			<artifactId>commons-lang3</artifactId>
 			<version>3.5</version>
 		</dependency>
-		<dependency>
-			<groupId>mochi</groupId>
-			<artifactId>mochitool</artifactId>
-			<version>1.0</version>
-		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>mochi</groupId>-->
+<!--			<artifactId>mochitool</artifactId>-->
+<!--			<version>1.0</version>-->
+<!--		</dependency>-->
 
 		<!-- <dependency>
             <groupId>org.hibernate</groupId>
@@ -233,11 +233,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
         </dependency>
-		<dependency>
-			<groupId>org.wltea.ik-analyzer</groupId>
-			<artifactId>ik-analyzer</artifactId>
-			<version>2012FF_u1</version>
-		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>org.wltea.ik-analyzer</groupId>-->
+<!--			<artifactId>ik-analyzer</artifactId>-->
+<!--			<version>2012FF_u1</version>-->
+<!--		</dependency>-->
         <!-- <dependency>
 		    <groupId>tk.mybatis</groupId>
 		    <artifactId>mapper-spring-boot-starter</artifactId>
@@ -396,11 +396,11 @@
 			<artifactId>jackson-databind</artifactId>
 			<version>2.8.7</version>
 		</dependency>
-		<dependency>
-			<groupId>freemarker</groupId>
-			<artifactId>freemarker</artifactId>
-			<version>2.3.14</version>
-		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>freemarker</groupId>-->
+<!--			<artifactId>freemarker</artifactId>-->
+<!--			<version>2.3.14</version>-->
+<!--		</dependency>-->
 		<dependency>
 			<groupId>com.netflix.feign</groupId>
 			<artifactId>feign-core</artifactId>

@@ -1,5 +1,7 @@
 package com.wondertek.baiying.util.IO;
 
+import sun.rmi.runtime.Log;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -21,7 +23,7 @@ public class BIOServer {
             Socket socket = new Socket("127.0.0.1", 8080);
             OutputStream outputStream = socket.getOutputStream();
             //写点东西给服务端
-            outputStream.write("hello server! i'm client ".getBytes());
+            outputStream.write("hello client! i'm server ".getBytes());
             outputStream.flush();
 
             InputStream inputStream = socket.getInputStream();
@@ -69,11 +71,11 @@ public class BIOServer {
 
             while (true) {
                 Socket socket = serverSocket.accept();
+                System.out.println("有客户端进行连接");
                 executorService.execute(new ServerHandler(socket));
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-
 }

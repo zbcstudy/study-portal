@@ -13,13 +13,13 @@ public class JdkVersion {
          jdkVsersion = System.getProperty("java.version");
      }
 
-    public static String getJdkVsersion() {
+    public static String getJdkVersion() {
         return jdkVsersion;
     }
 
     @Test
     public void test() {
-        System.out.println(getJdkVsersion());
+        System.out.println(getJdkVersion());
     }
 
 }
