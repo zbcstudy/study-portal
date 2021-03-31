@@ -12,7 +12,7 @@ public class BIOClient {
 
     public static void main(String[] args) {
         try {
-            Socket socket = new Socket("127.0.0.1", 8080);
+            Socket socket = new Socket("127.0.0.1", 9999);
             OutputStream outputStream = socket.getOutputStream();
             //写点东西给服务端
             outputStream.write("hello server! i'm client".getBytes());

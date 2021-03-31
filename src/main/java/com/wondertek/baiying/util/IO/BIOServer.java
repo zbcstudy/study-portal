@@ -60,13 +60,13 @@ public class BIOServer {
     /**
      * 线程池操作
      */
-    public void server3() {
+    public static void server3() {
 
         ServerSocket serverSocket = null;
         //创建一个线程池
         ExecutorService executorService = Executors.newFixedThreadPool(60);
         try {
-            serverSocket = new ServerSocket(8080);
+            serverSocket = new ServerSocket(9999);
             System.out.println("服务端启动成功，监听端口为8080，等待客户端连接");
 
             while (true) {
@@ -77,5 +77,9 @@ public class BIOServer {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public static void main(String[] args) {
+        server3();
     }
 }
