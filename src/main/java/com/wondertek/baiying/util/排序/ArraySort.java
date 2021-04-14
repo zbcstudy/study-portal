@@ -10,12 +10,12 @@ import java.util.Arrays;
 public class ArraySort {
 
     public static void main(String[] args) {
-        int[] array = {5,2,23,45,1,22,11,4,6};
+        int[] array = {5, 2, 23, 45, 1, 22, 11, 4, 6};
         //Arrays.sort(array);
         //int[] list = insertionSort(array);
         int[] list = insertSort(array);
 //        int[] list = bubbleSort(array);
-        for (int i = 0;i < list.length;i++) {
+        for (int i = 0; i < list.length; i++) {
             System.out.println(list[i]);
         }
         //System.out.println(1 % 2);
@@ -26,7 +26,7 @@ public class ArraySort {
      */
     @Test
     public void mergeSortTest() {
-        int[] array = {5,2,23,45,1,22,11,4,6};
+        int[] array = {5, 2, 23, 45, 1, 22, 11, 4, 6};
         mergeSort(array);
         System.out.println(Arrays.toString(array));
     }
@@ -36,31 +36,33 @@ public class ArraySort {
      */
     @Test
     public void quickSortTest() {
-        int[] array = {5,2,23,45,1,22,11,4,6,-1};
+        int[] array = {5, 2, 23, 45, 1, 22, 11, 4, 6, -1};
         quickSort(array);
         System.out.println(Arrays.toString(array));
     }
 
     /**
      * 插入排序
+     *
      * @param list
      * @return
      */
     public static int[] insertionSort(int[] list) {
         Arrays.sort(list);
-        for (int i =1;i<list.length;i++) {
+        for (int i = 1; i < list.length; i++) {
             int currentElement = list[i];
-            int k ;
+            int k;
             for (k = i - 1; k >= 0 && list[k] > currentElement; k--) {
                 list[k + 1] = list[k];
             }
-            list[k+1] = currentElement;
+            list[k + 1] = currentElement;
         }
         return list;
     }
 
     /**
      * 插入排序
+     *
      * @param list
      * @return
      */
@@ -70,7 +72,7 @@ public class ArraySort {
         for (int i = 0; i < list.length; i++) {
             int temp = list[i];
             j = i;
-            while (j > 0 && temp < list[j-1]) {
+            while (j > 0 && temp < list[j - 1]) {
                 list[j] = list[j - 1];
                 j--;
             }
@@ -81,6 +83,7 @@ public class ArraySort {
 
     /**
      * 冒泡排序
+     *
      * @param list
      * @return
      */
@@ -102,6 +105,7 @@ public class ArraySort {
 
     /**
      * 归并排序实现
+     *
      * @param list
      * @return
      */
@@ -146,6 +150,7 @@ public class ArraySort {
 
     /**
      * 快速排序实现
+     *
      * @param list
      */
     public static void quickSort(int[] list) {
