@@ -55,7 +55,7 @@
         <poi-ooxml.version>3.11</poi-ooxml.version>
         <poi-scratchpad.version>3.11</poi-scratchpad.version>
         <hibernate.version>5.2.8.Final</hibernate.version>
-        <shiro.version>1.4.0</shiro.version>
+        <shiro.version>1.7.1</shiro.version>
 	</properties>
     <dependencyManagement>
 	    <dependencies>
